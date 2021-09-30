@@ -1,1 +1,19 @@
-<p>usuarios works!</p>
+<input type="text" name="filterUsers" #usersSebitas id="" (blur)="filterUsersByName(usersSebitas.value)">
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let dataUsuario of users$ | async">
+        <div class="card" style="width: 18rem;">
+            <h5 class="card-header">{{dataUsuario.name}}</h5>
+            <div class="card-body">
+
+                <p class="card-text">{{dataUsuario.email}}</p>
+                <p class="card-text">{{dataUsuario.phone}}</p>
+                <p class="card-text">{{dataUsuario.website}}</p>
+                <h5 class="card-title">Dirección</h5>
+                <p class="card-text">{{dataUsuario.address.street}}- {{dataUsuario.address.suite}}- {{dataUsuario.address.city}}</p>
+                <h5 class="card-title">Informacion compañia</h5>
+                <p class="card-text">{{dataUsuario.company.name}}</p>
+            </div>
+        </div>
+    </div>
+</div>

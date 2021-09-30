@@ -4,6 +4,7 @@ import { PageRoutingModule } from './page-routing.module';
 import { UsuariosComponent } from './Usuarios/usuarios.component';
 import { AlbunesComponent } from './Albunes/albunes.component';
 import { HomeComponent } from './home/home.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { HomeComponent } from './home/home.component';
   imports: [
     CommonModule,
     PageRoutingModule,
+    HttpClientModule
 
   ]
 })
